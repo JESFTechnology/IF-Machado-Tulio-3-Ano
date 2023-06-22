@@ -1,0 +1,205 @@
+.navbar{background-color: rgb(16, 32, 17);}
+
+.navbar-toggler{
+    border: 0;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+
+
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+.dropdown-menu{
+    background-color: rgb(49, 45, 35);
+    border-radius: 0;
+}
+
+.dropdown-menu[data-bs-popper]{
+    top: 3.585rem;
+}
+
+body{
+    background-image: url(../img/fundo2.jpg);
+}
+
+
+.dropdown-item:hover{
+    background-color: rgb(58, 51, 39);
+}
+
+.logopngif{
+    width: 40px;
+    margin-left: 30px;
+}
+
+.caminhao{
+    color: black;
+    width: 100px; 
+    height: 100px;
+    border-radius: 10px;
+    transition-duration: 1s;
+}
+
+.caminhao:hover{
+    background-color: white;
+}
+
+.oi{
+   color: #86b7fe; 
+}
+
+.botaoLimpar{
+            background-color: white;
+            color: black;
+            transition-duration: 1s;
+}
+        
+.botaoLimpar:hover{
+            background-color: #ba2c2c;
+            color: white;
+}
+        
+.buttonC:checked{
+            
+}
+        
+.botaoCadastrar{
+            background-color: white;
+            color: black;
+            transition-duration: 1s;
+}
+        
+.botaoCadastrar:hover{
+            background-color: #168934;
+            color: white;
+}
+
+.botaoExcluir{
+            background-color: white;
+            color: black;
+            transition-duration: 1s;
+}
+        
+.botaoExcluir:hover{
+            background-color: #ffcd39;
+            color: black;
+}
+input{
+    border-radius: 5px;
+    border-color: white;
+}
+
+.formCidade{
+    background-color: silver; 
+    width: 270px; 
+    border-radius: 20px; 
+    text-align: center;
+}
+
+td{
+    border: 1px black solid;
+}
+
+.formLogin{
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    transition-duration: 1s;
+    margin-top: 20px; width: 300px
+}
+.formLogin:hover{
+    background-color: black;
+    color: #0d6efd;
+}
+
+li{
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px
+}
+
+li::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px; 
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+li:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+.logopngif{
+    transition-duration: 1s;
+}
+.logopngif:hover{
+    transition-duration: 1s;
+    width: 70px;
+}
+.botaoLogin{
+    width: 180px;
+}
+
+.text-login{
+    border-bottom: 1px;
+}
+
+.text-login::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px; 
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+nav{
+    background-color: black;
+}
+
+.text-login:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.face{
+    width: 120px;
+    height: 120px;
+    position: absolute;
+}
+
+#front{
+    background-color: #86b7fe;
+    transform: rotateY(180deg);
+}
+
+#back{
+    background-color: #ffcd39;
+    transform: rotateY(180deg);
+}
+
+.flip{
+    transform: rotateY(180deg);
+}
+
+
+.nd{
+    color: #86b7fe
+}
+
+.img-login{
+    width: 20%;
+}
