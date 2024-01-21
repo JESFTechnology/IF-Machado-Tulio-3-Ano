@@ -1,0 +1,141 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 04/10/2018, 14:40:21
+    Author     : luizf
+*/
+
+ /*Configurações gerais */
+
+.titulo1{
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.conteudo{
+	padding-top: 6rem;
+	padding-bottom: 4rem;
+	margin-left: -15px;
+	margin-right: -15px;
+}
+
+.titulo2{
+	font-size: 2rem;
+}
+
+.paragrafo{
+	font-size: 1.3rem;
+	color: green;
+}
+
+
+/*   */
+
+/* Configurações menu */
+
+.principal{
+	font-size: 1.3rem;
+	color: #fff;
+	font-family: arial;
+	cursor: pointer;
+}
+
+.principal:hover{
+	color: green;
+}
+
+.bareffect li a::before,
+.bareffect li a::after,
+.barreffect li:before,
+.barreffect li:after{
+	content: '';
+	width: 100%;
+	height: 0.125rem;
+	background-color: #fff;
+	position: absolute;
+	left: 0;
+	opacity: 0;
+	transition: transform 0.8s, opacity 0.5s;
+}
+
+.bareffect li a::before{
+	top: 0;
+	transform: translateY(10px);
+}
+
+.bareffect li a::after{
+	bottom: 0;
+	transform: translateY(-10px);
+}
+
+.bareffect li a:hover::before,
+.bareffect li a:hover::after{
+	opacity: 1; 
+	transform: translateY(0);
+}
+
+.dropdown-menu a{
+	color: #000;
+	font-size: 1.1rem;
+}
+
+.dropdown-menu a:hover{
+	color: green;
+	font-weight: bold;
+	transition: 1s;
+}
+
+
+/* start contador */
+
+.contador{
+	background-image: url(../imagens/ball.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+
+/* */
+
+/*start mapa */
+
+	.googlemaps{
+		width: 100%; /*  ou vw */
+		height: 50vh;
+	}
+
+/*end mapa*/
+
+/* start contato */
+
+.formLogin{
+    background-image: url(..//imagens/tennislog.jpg) !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 69rem;
+}
+
+/* end contato */
+
+
+/* end rodape*/
+
+
+
+
+/* media queries*/
+
+ @media screen and (max-width: 1024px){
+ 	.bareffect li a::before,
+ 	.bareffect li a::after{
+ 		width: 7rem;
+ 	}
+ }
+
+ /* */
+

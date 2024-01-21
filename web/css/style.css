@@ -1,0 +1,248 @@
+ /*Configurações gerais */
+
+.titulo1{
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.conteudo{
+	padding-top: 6rem;
+	padding-bottom: 4rem;
+	margin-left: -15px;
+	margin-right: -15px;
+}
+
+.titulo2{
+	font-size: 2rem;
+}
+
+.paragrafo{
+	font-size: 1.3rem;
+	color: green;
+}
+
+
+/*   */
+
+/* Configurações menu */
+
+.principal{
+	font-size: 1.3rem;
+	color: #fff;
+	font-family: arial;
+	cursor: pointer;
+}
+
+.principal:hover{
+	color: green;
+}
+
+.bareffect li a::before,
+.bareffect li a::after,
+.barreffect li:before,
+.barreffect li:after{
+	content: '';
+	width: 100%;
+	height: 0.125rem;
+	background-color: #fff;
+	position: absolute;
+	left: 0;
+	opacity: 0;
+	transition: transform 0.8s, opacity 0.5s;
+}
+
+.bareffect li a::before{
+	top: 0;
+	transform: translateY(10px);
+}
+
+.bareffect li a::after{
+	bottom: 0;
+	transform: translateY(-10px);
+}
+
+.bareffect li a:hover::before,
+.bareffect li a:hover::after{
+	opacity: 1; 
+	transform: translateY(0);
+}
+
+.dropdown-menu a{
+	color: #000;
+	font-size: 1.1rem;
+}
+
+.dropdown-menu a:hover{
+	color: green;
+	font-weight: bold;
+	transition: 1s;
+}
+
+
+
+/*   */
+
+/* start contador */
+
+.contador{
+	background-image: url(../imagens/ball.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+
+/* */
+
+/*start mapa */
+
+	.googlemaps{
+		width: 100%; /*  ou vw */
+		height: 50vh;
+	}
+
+/*end mapa*/
+
+/* start contato */
+
+.formLogin{
+    background-image: url(..//imagens/tennis-ball.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.contato{
+	background-image: url(..//imagens/tennis-ball.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select#estado,
+textarea#mensagem{
+	background-color: transparent; /* rgb.a(0,0,0,0) */
+	margin-bottom: 0.625rem;
+	border-radius: 0;
+	font-size: 1.125rem;
+	color: #fff;
+}
+option{
+	color: #000;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select#estado:focus,
+textarea#mensagem:focus{
+	background-color: rgba(0,0,0,0);
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+select#estado::placeholder,
+textarea#mensagem::placeholder{
+	color: #fff;
+}
+
+input[type="submit"],
+input[type="reset"]{
+	cursor: pointer;
+}
+
+
+
+/* end contato */
+
+/* start rodape*/
+
+footer#rodape{
+	background-image: url(..//imagens/saibro.jpg);
+	background-size: cover;
+}
+
+footer#rodape a{
+	color: #fff;
+
+}
+
+footer#rodape a:hover{
+	text-decoration: none;
+	color: #fb7777;
+}
+
+footer#rodape .fa{
+	font-size: 1.3125rem;
+}
+
+.fa-facebook,
+.fa-twitter,
+.fa-linkedin,
+.fa-google-plus{
+	width: 52px;
+	height: 52px;
+	text-align: center;
+	line-height: 54px;
+	border-radius: 50%;
+}
+
+.fa-facebook{
+	background-color: #3b5998;
+}
+
+.fa-twitter{
+	background-color: #55acec;
+}
+
+.fa-linkedin{
+	background-color: #e68523;
+}
+
+.fa-google-plus{
+	background-color: #dc4e41;
+}
+
+.rdati{
+	color: #fb7777;
+}
+
+/* end rodape*/
+
+/*start seta*/
+
+.seta{
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	color: #fff;
+	font-size: 20px;
+	border: 1px solid #fff;
+	padding: 10px;
+	border-radius: 10px;
+	background-color: rgba(0,0,0,0.5);
+	opacity: 0.4;
+	transition: opacity 0.5s;
+}
+
+.seta:hover{
+	opacity: 1;
+}
+
+/*end seta*/
+
+
+
+/* media queries*/
+
+ @media screen and (max-width: 1024px){
+ 	.bareffect li a::before,
+ 	.bareffect li a::after{
+ 		width: 7rem;
+ 	}
+ }
+
+ /* */

@@ -1,0 +1,139 @@
+/*Configurações gerais */
+
+.titulo1{
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.conteudo{
+	padding-top: 6rem;
+	padding-bottom: 4rem;
+	margin-left: -15px;
+	margin-right: -15px;
+}
+
+.titulo2{
+	font-size: 2rem;
+}
+
+.span{
+	font-size: 1.4rem;
+	color: #808080;
+	border-bottom: 0.5px solid #000;
+}
+
+.span:hover{
+	color: rgb(255,95,0);
+}
+
+
+/*   */
+
+/* Configurações menu */
+
+.principal{
+	font-size: 1.3rem;
+	color: #fff;
+	font-family: arial;
+	cursor: pointer;
+}
+
+.principal:hover{
+	color: green;
+}
+
+.bareffect li a::before,
+.bareffect li a::after,
+.barreffect li:before,
+.barreffect li:after{
+	content: '';
+	width: 100%;
+	height: 0.125rem;
+	background-color: #fff;
+	position: absolute;
+	left: 0;
+	opacity: 0;
+	transition: transform 0.8s, opacity 0.5s;
+}
+
+.bareffect li a::before{
+	top: 0;
+	transform: translateY(10px);
+}
+
+.bareffect li a::after{
+	bottom: 0;
+	transform: translateY(-10px);
+}
+
+.bareffect li a:hover::before,
+.bareffect li a:hover::after{
+	opacity: 1; 
+	transform: translateY(0);
+}
+
+.dropdown-menu a{
+	color: #000;
+	font-size: 1.1rem;
+}
+
+.dropdown-menu a:hover{
+	color: green;
+	font-weight: bold;
+	transition: 1s;
+}
+
+
+/* start rodape*/
+
+footer#rodape{
+	background-image: url(..//imagens/saibro.jpg);
+	background-size: cover;
+}
+
+footer#rodape a{
+	color: #fff;
+
+}
+
+footer#rodape a:hover{
+	text-decoration: none;
+	color: #fb7777;
+}
+
+footer#rodape .fa{
+	font-size: 1.3125rem;
+}
+
+.fa-facebook,
+.fa-twitter,
+.fa-linkedin,
+.fa-google-plus{
+	width: 52px;
+	height: 52px;
+	text-align: center;
+	line-height: 54px;
+	border-radius: 50%;
+}
+
+.fa-facebook{
+	background-color: #3b5998;
+}
+
+.fa-twitter{
+	background-color: #55acec;
+}
+
+.fa-linkedin{
+	background-color: #e68523;
+}
+
+.fa-google-plus{
+	background-color: #dc4e41;
+}
+
+.rdati{
+	color: #fb7777;
+}
+
+/* end rodape*/

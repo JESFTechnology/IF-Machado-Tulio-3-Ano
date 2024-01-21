@@ -1,56 +1,29 @@
-<%-- 
-    Document   : CAECidade
-    Created on : 14/02/2023, 09:35:00
-    Author     : johan
---%>
-
 <%@page import="modelo.DAOCidade"%>
-<%@page import="modelo.Cidade" %>
-
+<%@page import="modelo.Cidade"%>
 <%
+String opcao = request.getParameter("opcao");
+//String opcao2 =${param.opcao};
+String codigo = request.getParameter("codigo");
+    
+Cidade cidade = new Cidade();
+cidade.setCodigo(Integer.parseInt(codigo));
+cidade.setCidade(request.getParameter("cidade"));
+cidade.setUf(request.getParameter("uf"));
 
-    String nomeCidade = request.getParameter("nomeCidade");
-    String ufCidade = request.getParameter("ufCidade");
-    String codigoCidade = request.getParameter("codigoCidade");
-    String opcao = request.getParameter("opcao");
-    String mensagem="";
-    String usuario;
-    
-    Cidade objCidade= new Cidade();
-    
-    objCidade.setNomeCidade(nomeCidade);
-    objCidade.setUfCidade(ufCidade);
-    objCidade.setCodigo(Integer.parseInt(codigoCidade));
-    
-    DAOCidade objDAOCidade = new DAOCidade();
-    
-    if(opcao.equals("cadastrar")){
-    mensagem = objDAOCidade.inserir(objCidade);
-    }
-    else if(opcao.equals("alterar")){
-    mensagem = objDAOCidade.alterar(objCidade);
-    }
-    else if(opcao.equals("excluir")){
-    mensagem = objDAOCidade.excluir(objCidade);
-    }
-    response.sendRedirect("cadastroCidade.jsp?mensagem="+mensagem);
+DAOCidade daoCidade = new DAOCidade();
 
+String mensagem="";
+if(opcao.equals("cadastrar")){
+ mensagem = daoCidade.inserir(cidade);
+response.sendRedirect("CadastroCidade.jsp?mensagem="+mensagem);
+}
+if(opcao.equals("alterar")){
+ mensagem = daoCidade.alterar(cidade);
+response.sendRedirect("CadastroCidade.jsp?mensagem="+mensagem);
+}
+if(opcao.equals("excluir")){
+ mensagem = daoCidade.remover(cidade);
+response.sendRedirect("CadastroCidade.jsp?mensagem="+mensagem);
+}
 %>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Cidade: <%= nomeCidade%></h1>
-        <h1>UF: <%= ufCidade%></h1>
-        
-        <a href="cadastroCidade.jsp?mensagem= Cadastrado com sucesso!!&nomeCidade=<%=nomeCidade%>&ufCidade=<%=ufCidade%>">Voltar para Cadastro</a>
-                
-    </body>
-    
-    
-</html>
