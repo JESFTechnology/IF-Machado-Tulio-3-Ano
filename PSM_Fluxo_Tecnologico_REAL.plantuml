@@ -1,0 +1,15 @@
+@startuml
+actor Caixa
+
+Caixa -> JSP_Venda : acessa venda.jsp
+JSP_Venda -> VendaServlet : submit form (POST)
+VendaServlet -> DAOVenda : inserir(venda)
+DAOVenda -> Conexao : getConnection()
+DAOVenda -> "MySQL" : INSERT INTO venda...
+DAOVenda <-- "MySQL" : OK
+
+VendaServlet -> DAOItensVenda : inserir itens
+DAOItensVenda -> "MySQL" : INSERT INTO itens_venda...
+
+VendaServlet -> JSP_Resumo : forward()
+@enduml
