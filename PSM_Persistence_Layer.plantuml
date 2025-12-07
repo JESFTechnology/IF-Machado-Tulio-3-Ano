@@ -1,0 +1,42 @@
+@startuml
+package "DAO" {
+
+class Conexao {
+    + static Connection getConnection()
+}
+
+class DAOCliente {
+    + Cliente buscar(int id)
+    + List<Cliente> listarTodos()
+    + boolean inserir(Cliente c)
+    + boolean atualizar(Cliente c)
+    + boolean deletar(int id)
+}
+
+class DAOProduto {
+    + Produto buscar(int id)
+    + List<Produto> listar()
+    + boolean atualizarEstoque(int id, int novoEstoque)
+}
+
+class DAOVenda {
+    + int inserir(Venda v)
+    + List<Venda> listar()
+}
+
+class DAOItensVenda {
+    + boolean inserir(ItemVenda item)
+    + List<ItemVenda> listarPorVenda(int idVenda)
+}
+
+class DAOLogin {
+    + Funcionario autenticar(String usuario, String senha)
+}
+}
+
+Conexao <.. DAOCliente
+Conexao <.. DAOProduto
+Conexao <.. DAOVenda
+Conexao <.. DAOItensVenda
+
+@enduml
