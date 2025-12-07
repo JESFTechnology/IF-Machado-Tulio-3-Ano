@@ -1,0 +1,37 @@
+@startuml
+
+class Produto {
+  -codigo: String
+  -nome: String
+  -preco: double
+  -estoque: int
+}
+
+class Venda {
+  -id: int
+  -data: Date
+  -total: double
+}
+
+class ItemVenda {
+  -quantidade: int
+  -subtotal: double
+}
+
+class Usuario {
+  -id: int
+  -nome: String
+  -cargo: String
+}
+
+class Caixa {
+  -id: int
+  -status: String
+}
+
+Produto "1" -- "0..*" ItemVenda
+ItemVenda "*" -- "1" Venda
+Venda "1" -- "1" Caixa
+Usuario "1" -- "*" Venda : realiza >
+
+@enduml
