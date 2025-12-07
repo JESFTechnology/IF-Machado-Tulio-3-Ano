@@ -1,0 +1,89 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+package "Model" {
+
+class Cidade {
+    - int id
+    - String nome
+    - String estado
+}
+
+class Cliente {
+    - int id
+    - String nome
+    - String cpf
+    - String telefone
+    - Cidade cidade
+}
+
+class Funcionario {
+    - int id
+    - String nome
+    - String login
+    - String senha
+    - Cidade cidade
+}
+
+class Marca {
+    - int id
+    - String nome
+}
+
+class Produto {
+    - int id
+    - String descricao
+    - double preco
+    - int estoque
+    - Marca marca
+}
+
+class Modelo {
+    - int id
+    - String nome
+}
+
+class Veiculo {
+    - int id
+    - String placa
+    - Modelo modelo
+}
+
+class Transporte {
+    - int id
+    - Funcionario funcionario
+    - Veiculo veiculo
+}
+
+class Venda {
+    - int id
+    - LocalDateTime data
+    - Cliente cliente
+    - Transporte transporte
+}
+
+class ItemVenda {
+    - int id
+    - Produto produto
+    - Venda venda
+    - int quantidade
+    - double subtotal
+}
+
+class Login {
+    - int id
+    - String usuario
+    - String senha
+}
+}
+
+Cidade "1" <-- "1" Cliente
+Cidade "1" <-- "1" Funcionario
+Modelo "1" <-- "1" Veiculo
+Funcionario "1" <-- "1" Transporte
+Veiculo "1" <-- "1" Transporte
+Cliente "1" <-- "1" Venda
+Transporte "1" <-- "1" Venda
+Produto "1" <-- "*" ItemVenda
+Venda "1" <-- "*" ItemVenda
+@enduml
