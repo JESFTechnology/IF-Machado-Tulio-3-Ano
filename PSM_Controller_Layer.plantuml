@@ -1,0 +1,25 @@
+@startuml
+package "Controller" {
+
+class LoginServlet {
+    + doPost()
+}
+
+class VendaServlet {
+    + doGet()
+    + doPost()
+}
+
+class ProdutoServlet {
+    + doGet()
+    + doPost()
+}
+
+LoginServlet --> DAOLogin
+VendaServlet --> DAOVenda
+VendaServlet --> DAOItensVenda
+ProdutoServlet --> DAOProduto
+
+}
+
+@enduml
