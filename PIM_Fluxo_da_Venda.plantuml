@@ -1,0 +1,13 @@
+@startuml
+actor Atendente
+Atendente -> UI: iniciarVenda()
+UI -> Sistema: criarVenda()
+Sistema -> Produto: buscarProduto(codigo)
+Produto --> Sistema: retornarProduto
+Atendente -> UI: adicionarItem(produto)
+UI -> Sistema: incluirItem(venda, produto)
+Sistema -> Venda: calcularTotal()
+Atendente -> UI: fecharVenda()
+UI -> Sistema: registrarVenda()
+Sistema -> Caixa: atualizarSaldo()
+@enduml
