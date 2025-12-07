@@ -1,0 +1,18 @@
+@startuml
+left to right direction
+actor "Atendente" as A
+actor "Gerente" as G
+
+A --> (Registrar Venda)
+A --> (Adicionar Produto ao Carrinho)
+A --> (Buscar Produto)
+A --> (Fechar Caixa)
+
+G --> (Gerar Relatório de Vendas)
+G --> (Cadastrar Produto)
+G --> (Atualizar Estoque)
+G --> (Gerenciar Usuários)
+
+(Registrar Venda) --> (Adicionar Produto ao Carrinho)
+(Registrar Venda) --> (Fechar Caixa)
+@enduml
